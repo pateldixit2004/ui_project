@@ -7,6 +7,9 @@ import 'package:ui_project/instagram/provider/bottonprovider.dart';
 import 'package:ui_project/instagram/provider/serch_photo/serch_provider.dart';
 import 'package:ui_project/instagram/provider/story_provider.dart';
 import 'package:ui_project/instagram/screen/home_screen.dart';
+import 'package:ui_project/instagram/screen/login_screen/get_data.dart';
+import 'package:ui_project/instagram/screen/login_screen/login_home.dart';
+import 'package:ui_project/instagram/screen/login_screen/set_data.dart';
 
 import 'instagram/provider/message_provider.dart';
 import 'instagram/provider/profile_provider/profileprovider.dart';
@@ -15,9 +18,7 @@ import 'instagram/screen/story_messeger_screen.dart';
 void main()
 {
   runApp(
-      DevicePreview(
-          enabled: !kReleaseMode,
-          builder: (context) => Sizer(
+      Sizer(
         builder: (context, orientation, deviceType) =>  MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (context) => changeScreen(),),
@@ -29,13 +30,17 @@ void main()
         child: MaterialApp(
 
           debugShowCheckedModeBanner: false,
+          initialRoute: 're',
           routes: {
-            '/':(context) => HomeScreen(),
+            '/':(context) => GetData(),
+            're':(context) => ReginterScreen(),
+            '/lon':(context) => LoginHome(),
+            'home':(context) => HomeScreen(),
             'msg':(context) => MessgerScreen(),
           },
         ),
     ),
       ),
-      )
+
   );
 }
