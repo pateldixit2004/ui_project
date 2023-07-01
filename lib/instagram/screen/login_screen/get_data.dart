@@ -52,7 +52,7 @@ class _GetDataState extends State<GetData> {
               Map m1= await shar.getData();
               if(m1['email']==email && m1['pass']==password)
                 {
-                  Navigator.pushNamed(context,'/');
+                  Navigator.pushNamed(context,'home');
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login")));
                 }
               else
@@ -61,8 +61,8 @@ class _GetDataState extends State<GetData> {
 
               }
 
-            }, child: Text("Login")),
-            Spacer(),
+            }, child: Text("Login"),),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

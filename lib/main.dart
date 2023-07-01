@@ -30,7 +30,7 @@ void main()
         child: MaterialApp(
 
           debugShowCheckedModeBanner: false,
-          initialRoute: 're',
+          // initialRoute: 're',
           routes: {
             '/':(context) => GetData(),
             're':(context) => ReginterScreen(),
