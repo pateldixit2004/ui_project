@@ -57,7 +57,7 @@ class _ReginterScreenState extends State<ReginterScreen> {
               String? password= txtpassword.text;
 
               SharClass shars =SharClass();
-              shars.setData(email: email, password: password);
+              shars.setData(email: email, password: password,login: true);
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("success lsign up ")));
               Navigator.pushReplacementNamed(context, '/');
             }, child: Text("Register")),

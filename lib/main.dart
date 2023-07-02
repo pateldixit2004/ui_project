@@ -10,7 +10,6 @@ import 'package:ui_project/instagram/screen/home_screen.dart';
 import 'package:ui_project/instagram/screen/login_screen/get_data.dart';
 import 'package:ui_project/instagram/screen/login_screen/login_home.dart';
 import 'package:ui_project/instagram/screen/login_screen/set_data.dart';
-
 import 'instagram/provider/message_provider.dart';
 import 'instagram/provider/profile_provider/profileprovider.dart';
 import 'instagram/screen/story_messeger_screen.dart';
@@ -18,7 +17,9 @@ import 'instagram/screen/story_messeger_screen.dart';
 void main()
 {
   runApp(
-      Sizer(
+      DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (context) => Sizer(
         builder: (context, orientation, deviceType) =>  MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (context) => changeScreen(),),
@@ -41,6 +42,6 @@ void main()
         ),
     ),
       ),
-
+      )
   );
 }

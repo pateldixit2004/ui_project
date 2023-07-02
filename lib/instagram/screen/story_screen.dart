@@ -353,9 +353,6 @@ class _StoryScreenState extends State<StoryScreen> {
 
 
 
-
-
-
                       Share.share('${providerF!.postList[index!].post}');
                       
                       Share.shareXFiles([]);
@@ -375,7 +372,7 @@ class _StoryScreenState extends State<StoryScreen> {
               print('${providerF!.savedList}');
 
 
-            }, icon: Icon(Icons.copy_sharp)),
+            }, icon: Icon(Icons.bookmark_add_outlined)),
           ],
         ),
 

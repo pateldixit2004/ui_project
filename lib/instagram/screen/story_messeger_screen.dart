@@ -174,7 +174,7 @@ class _MessgerScreenState extends State<MessgerScreen> {
 
                           providerF!.changeImagePath(messgeModel,index);
                         },
-                        icon: Icon(Icons.camera)),
+                        icon: Icon(Icons.photo_camera_outlined),),
                   ),
                 ),
                 itemCount: providerF!.itemList.length,
